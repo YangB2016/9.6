@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	@keyframes demo{
+		from{top:0px;}
+		to{top:-70px;}
+	}
+	*{margin: 0;padding: 0;list-style: none;text-decoration:none;}
+		ul{width: 720px;height: 200px;background:#ccc;margin:50px auto;padding-left: 50px}
+		li{width: 150px;height: 70px;background:pink; float: left;margin:50px 8px;border-radius:10px;line-height:70px;text-align: center;font-size:30px;color:#fff;font-family:'微软雅黑';box-shadow:inset 1px 1px 5px #333;position:relative;overflow: hidden;}
+		a{width: 150px;height: 70px;position: absolute;left: 0;top: 0;border-radius:10px;line-height:70px;text-align: center;font-size:30px;color:#fff;font-family:'微软雅黑';box-shadow:inset 1px 1px 5px #333;background:#777;-webkit-transition:1s all ease;}
+		/*a:hover{animation:demo 2s linear infinite;}*/
+		a:active{top:-70px;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="javascript:;">About</a></li>
+		<li><a href="javascript:;">Yang</a></li>
+		<li><a href="javascript:;">Biao</a></li>
+		<li><a href="javascript:;">About</a></li>
+	</ul>
+</body>
+</html>

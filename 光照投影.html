@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.move{
+			height: 150px;
+			width: 150px;
+			border-radius:50%;
+			background:orange;
+			box-shadow:0 0 130px #f01; 
+			position:absolute;
+			left: 0;
+			top: 0;
+		}
+		p{
+			font-size:50px;
+			font-weight:bold;
+			height: 300px;
+			width: 300px;
+			margin:100px auto;
+			 
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oMove=document.querySelector('.move');
+			var oCon=document.querySelector('.content');
+			document.onmousemove=function(ev){
+				oMove.style.left=ev.pageX-oMove.offsetWidth/2+'px';
+				oMove.style.top=ev.pageY-oMove.offsetHeight/2+'px';
+				var x=oCon.offsetLeft+oCon.offsetWidth/2-ev.pageX;
+				var y=oCon.offsetTop+oCon.offsetHeight/2-ev.pageY;
+				var dis=Math.sqrt(x*x+y*y);
+				// oCon.style.textShadow=x+'px '+y+'px '+dis+'px #000';
+				oCon.style.textShadow = x/2+'px '+y/2+'px '+dis/20+'px #000';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="move"></div>
+
+	<p class="content">圆角border-radius
+	阴影box-shadow
+		text-shadow
+	</p>
+</body>
+</html>
